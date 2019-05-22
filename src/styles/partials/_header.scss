@@ -40,8 +40,11 @@
   &__link {
     text-decoration: none;
     text-transform: uppercase;
-    display: block;
+    display: flex;
+    align-items: center;
+    height: 100%;
     letter-spacing: 0.1em;
+    line-height: 1;
   }
 }
 
