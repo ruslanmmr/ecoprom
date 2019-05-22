@@ -4,6 +4,7 @@ $(document).ready(function () {
   scrollInit();
   map();
   $(".input_phone").mask("(999) 999-99-99");
+  new WOW().init();
 });
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();

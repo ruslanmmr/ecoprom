@@ -58,7 +58,7 @@
     width: 12.4em;
     padding: 0.8em;
     border-radius: 0.6em;
-    background: #272727;
+    background: rgba(0, 0, 0, 0.9);
     text-align: center;
     color: #fff;
     display: flex;
@@ -78,7 +78,7 @@
       bottom: -2.5em;
       left: 50%;
       margin-left: -1px;
-      background: #272727;
+      background: #000;
     }
   }
   &.active {
