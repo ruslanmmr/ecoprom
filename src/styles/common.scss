@@ -1,0 +1,106 @@
+@import "./partials/fonts";
+@import "./partials/bootstrap-grid";
+
+$main-color: #ff8a00;
+
+body {
+  text-rendering: optimizeSpeed;
+  font: 18px "SFProDisplay", sans-serif;
+  color: #000;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.4;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+p {
+  margin: 0;
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+.wrapper {
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+}
+.main {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1294px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+  &_style2 {
+    max-width: 1530px;
+  }
+}
+.icon {
+  width: 50px;
+  height: 50px;
+  fill: #000;
+  stroke: #000;
+  &_fixed {
+    transform: translateX(-9%);
+  }
+}
+.button {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1;
+  padding: 21px;
+  border: 1px solid #88DE5F;
+  border-radius: 8px;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    border-color: #000;
+  }
+}
+.title {
+  font-size: 48px;
+  display: block;
+  margin: 0 0 30px 0;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+}
+
+
+@media all and(max-width: 992px) {
+  .title {
+    font-size: 42px;
+  }
+}
+@media all and(max-width: 768px) {
+  .title {
+    font-size: 34px;
+  }
+}
+@media all and(max-width: 576px) {
+  .button {
+    font-size: 14px;
+    padding: 16px 20px;
+  }
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+@import "./partials/header";
+@import "./partials/home";
+@import "./partials/about";
+@import "./partials/service-map";
+@import "./partials/footer";

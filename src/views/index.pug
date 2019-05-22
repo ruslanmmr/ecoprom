@@ -1,0 +1,18 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body
+    .wrapper.compensate-scrollbar
+      include blocks/header
+      include blocks/nav
+      span.overlay
+      main.main
+        include blocks/home
+        include blocks/about
+        include blocks/about-company
+        include blocks/service-map
+      include blocks/footer
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")
