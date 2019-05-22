@@ -151,7 +151,7 @@
   background-color: #fff;
   transition: transform 0.3s;
   transform: translateX(-100%);
-  letter-spacing: 0.05em;
+  letter-spacing: normal;
   &.scrolled {
     padding-top: 0;
   }
@@ -161,7 +161,7 @@
   &__container {
     width: 300px;
     height: 100%;
-    padding-top: 150px;
+    padding-top: 110px;
     position: relative;
   }
   &__list {
@@ -169,20 +169,45 @@
     overflow: auto;
     list-style: none;
     margin: 0;
-    padding: 0 0 30px 0;
+    padding: 40px 84px 40px 20px;
   }
   &__item {
+    color: #333333;
+    line-height: 32px;
     &:not(:last-child) {
       margin-bottom: 25px;
+    }
+    &_contact {
+      font-size: 16px;
+      display: none;
+      color: #000;
+      line-height: normal;
+      text-align: right;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    &_pd {
+      margin-top: 40px;
+      padding-top: 25px;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #C4C4C4;
+      }
     }
   }
   &__link {
     display: block;
-    line-height: 32px;
-    color: #333333;
+    color: inherit;
     text-decoration: none;
     text-align: right;
-    padding-right: 84px;
     font-weight: 500;
     position: relative;
     &:after {
@@ -192,11 +217,17 @@
       width: 10px;
       height: 10px;
       top: 12px;
-      right: 64px;
+      right: -20px;
       border-radius: 100%;
       background-color: #99E575;
       transition: 0.3s;
       opacity: 0;
+    }
+    &_contact {
+      display: inline-block;
+      &:after {
+        display: none;
+      }
     }
     &:hover {
       &:after {
@@ -212,13 +243,10 @@
     padding: 15px 0;
   }
   .nav__container {
-    padding-top: 40px;
+    padding-top: 0;
   }
-  .nav__link {
-    padding-right: 59px;
-    &:after {
-      right: 42px;
-    }
+  .nav__list {
+    padding: 40px 59px 40px 20px;
   }
   .nav {
     z-index: 150;
@@ -260,6 +288,9 @@
     margin-left: 50px;
     padding-left: 40px;
   }
+  .nav__item_contact {
+    display: block;
+  }
   .header__link {
     display: none;
   }
@@ -291,17 +322,18 @@
     }
   }
   .nav__container {
-    padding-top: 30px;
     width: 245px;
   }
-  .nav__link {
+  .nav__item {
     font-size: 16px;
-    padding-right: 50px;
   }
-  .nav__link:after {
-    right: 30px;
+  .nav__list {
+    padding: 30px 50px 30px 20px;
   }
   .nav__item:not(:last-child) {
     margin-bottom: 20px;
+  }
+  .nav__item_contact {
+    font-size: 14px;
   }
 }

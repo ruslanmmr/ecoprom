@@ -1,8 +1,7 @@
 $(document).ready(function () {
   lazy();
-  reviews();
   nav();
-  home();
+  scrollInit();
   map();
   $(".input_phone").mask("(999) 999-99-99");
 });
@@ -18,9 +17,28 @@ $(window).on('scroll', function() {
 //global variables
 var innerWidth = $('body').innerWidth(),
     scrollbarWidth,
-    scrollTop = $(window).scrollTop();
+    scrollTop = $(window).scrollTop(),
+    //scroll-styling
+    cursorcolorVar = "#cccccc",
+    cursorwidthVar = "7px",
+    cursorborderVar = "0",
+    cursorborderradiusVar = "0",
+    zindexVar = [100],
+    bouncescrollVar = false;
 
 
+//
+function scrollInit() {
+  $('.scroll-area').niceScroll({
+    cursorcolor: cursorcolorVar,
+    cursorwidth: cursorwidthVar,
+    cursorborder: cursorborderVar,
+    cursorborderradius: cursorborderradiusVar,
+    zindex: zindexVar,
+    bouncescroll: bouncescrollVar,
+    autohidemode: false
+  });
+};
 //
 function compensateScrollbar() { 
   var div = $('<div style="width:50px;height:50px;overflow:hidden;position:absolute;top:-200px;left:-200px;"><div style="height:100px;"></div>'); 
@@ -58,6 +76,7 @@ function nav() {
     if ($nav.hasClass('nav_active')) {
       compensateScrollbar();
       $(".compensate-scrollbar").css('padding-right', scrollbarWidth);
+      $('.scroll-area').getNiceScroll().resize();
       $('.header').addClass('active');
       scrollLock.hide($("body"));
       $overlay.fadeIn(300);
@@ -94,58 +113,6 @@ function lazy() {
     threshold: '500',
     effect: 'fadeIn',
     effectTime: '300'
-  });
-}
-//clients
-function home() {
-  var $slider = $('.home .banner'),
-      prevArrow = $slider.parents('.slider').find('.slider-button_prev'),
-      nextArrow = $slider.parents('.slider').find('.slider-button_next');
-
-  $slider.on('init reInit afterChange', function(){
-    lazy();
-  })
-
-  $slider.slick({
-    infinite: true,
-    dots: false,
-    arrows: true,
-    fade: true,
-    speed: 400,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    prevArrow: prevArrow,
-    nextArrow: nextArrow
-  });
-}
-//reviews
-function reviews() {
-  var $slider = $('.reviews__slider'),
-      prevArrow = $slider.parents('.slider').find('.slider-button_prev'),
-      nextArrow = $slider.parents('.slider').find('.slider-button_next');
-
-  $slider.on('init reInit afterChange', function(){
-    lazy();
-  })
-
-  $slider.slick({
-    infinite: true,
-    dots: false,
-    arrows: true,
-    speed: 400,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    prevArrow: prevArrow,
-    nextArrow: nextArrow,
-    responsive: [
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
   });
 }
 
