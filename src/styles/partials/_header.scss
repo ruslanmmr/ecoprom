@@ -37,17 +37,19 @@
   }
 }
 .logo {
+  height: 24px;
   &__link {
     text-decoration: none;
     text-transform: uppercase;
     display: flex;
     align-items: center;
     height: 100%;
-    letter-spacing: 0.1em;
     line-height: 1;
+    letter-spacing: 0.1em;
     background-color: rgba(255, 199, 199, 0.507);
     span {
       background-color: rgb(180, 255, 158);
+      line-height: 0.8;
     }
   }
 }
@@ -58,9 +60,12 @@
   text-transform: uppercase;
   padding-left: 59px;
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
   margin-left: 125px;
-  span {
+  height: 24px;
+  background-color: rgba(255, 199, 199, 0.507);
+  &__inner {
     position: absolute;
     display: inline-block;
     left: 0;
@@ -89,7 +94,7 @@
     }
   }
   &.active {
-    span {
+    .nav-button__inner {
       background-color: transparent;
       &:before {
         transform: rotate(45deg);
@@ -102,6 +107,11 @@
         left: 1px;
       }
     }
+  }
+  &__text {
+    background-color: rgb(180, 255, 158);
+    line-height: 0.8;
+    display: block;
   }
 }
 .nav-close {
@@ -240,7 +250,7 @@
   .nav-button {
     margin-left: 80px;
     padding-left: 35px;
-    span {
+    &__inner {
       width: 25px;
     }
   }
