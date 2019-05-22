@@ -4,7 +4,6 @@
   width: 100%;
   line-height: 24px;
   font-weight: 700;
-  font-family: 'Geometria';
   padding: 20px 0;
   transition: padding-top .3s;
   background-color: rgba(255, 255, 255, 0.9);
@@ -45,12 +44,7 @@
     align-items: center;
     height: 100%;
     line-height: 1;
-    letter-spacing: 0.1em;
-    background-color: rgba(255, 199, 199, 0.507);
-    span {
-      background-color: rgb(180, 255, 158);
-      line-height: 0.8;
-    }
+    letter-spacing: 0.15em;
   }
 }
 
@@ -64,7 +58,6 @@
   align-items: center;
   margin-left: 125px;
   height: 24px;
-  background-color: rgba(255, 199, 199, 0.507);
   &__inner {
     position: absolute;
     display: inline-block;
@@ -107,11 +100,6 @@
         left: 1px;
       }
     }
-  }
-  &__text {
-    background-color: rgb(180, 255, 158);
-    line-height: 0.8;
-    display: block;
   }
 }
 .nav-close {
@@ -161,8 +149,9 @@
   height: 100%;
   padding: 20px 0 0 0;
   background-color: #fff;
-  transition: 0.3s;
+  transition: transform 0.3s;
   transform: translateX(-100%);
+  letter-spacing: 0.05em;
   &.scrolled {
     padding-top: 0;
   }
@@ -180,7 +169,7 @@
     overflow: auto;
     list-style: none;
     margin: 0;
-    padding: 0 0 20px 0;
+    padding: 0 0 30px 0;
   }
   &__item {
     &:not(:last-child) {
@@ -226,9 +215,9 @@
     padding-top: 40px;
   }
   .nav__link {
-    padding-right: 65px;
+    padding-right: 59px;
     &:after {
-      right: 45px;
+      right: 42px;
     }
   }
   .nav {
@@ -307,10 +296,10 @@
   }
   .nav__link {
     font-size: 16px;
-    padding-right: 42px;
+    padding-right: 50px;
   }
   .nav__link:after {
-    right: 25px;
+    right: 30px;
   }
   .nav__item:not(:last-child) {
     margin-bottom: 20px;
