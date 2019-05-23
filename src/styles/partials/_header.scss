@@ -23,9 +23,7 @@
     justify-content: space-between;
     padding: 20px 0;
   }
-  &__link {
-    text-decoration: none;
-    display: inline-block;
+  &__contact-item {
     &:not(:first-child) {
       margin-left: 91px;
     }
@@ -271,7 +269,7 @@
       width: 25px;
     }
   }
-  .header__link:not(:first-child) {
+  .header__contact-item:not(:first-child) {
     margin-left: 50px;
   }
 }
@@ -291,7 +289,7 @@
   .nav__item_contact {
     display: block;
   }
-  .header__link {
+  .header__contact-item {
     display: none;
   }
 }

@@ -3,6 +3,7 @@ $(document).ready(function () {
   nav();
   scrollInit();
   map();
+  cover();
   $(".input_phone").mask("(999) 999-99-99");
   new WOW().init();
 });
@@ -110,10 +111,13 @@ function nav() {
 //lazy
 function lazy() {
   $(".lazy").Lazy({
-    visibleOnly: false,
-    threshold: '500',
+    visibleOnly: true,
     effect: 'fadeIn',
-    effectTime: '300'
+    effectTime: '300',
+    defaultImage: false,
+    afterLoad: function() {
+      cover();
+    }
   });
 }
 
@@ -129,6 +133,23 @@ function map() {
       $region.removeClass('active');
       attr = $(e.target).data('item');
       $(`*[data-item='${attr}']`).addClass('active');
+    }
+  });
+}
+//js
+function cover() {
+  $('.cover-box').each(function () {
+    //set size
+    var th = $(this).height(), //box height
+      tw = $(this).width(), //box width
+      im = $(this).children('img'), //image
+      ih = im.height(),
+      iw = im.width();
+
+    if ((tw / th) >= (iw / ih)) {
+      im.addClass('ww').removeClass('wh');
+    } else {
+      im.addClass('wh').removeClass('ww');
     }
   });
 }
