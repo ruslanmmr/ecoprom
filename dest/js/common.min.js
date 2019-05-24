@@ -180,8 +180,10 @@ function tabs() {
     $(this).addClass('active');
     tabState();
     if(innerWidth <= 576) {
-      var $target = $('.fixed-area__content_right').offset().top - 60;
+      setTimeout(function() {
+        var $target = $('.fixed-area__content_right').offset().top - 60;
         $('body,html').animate({scrollTop: $target}, 500);
+      }, 500)
     }
   })
   
