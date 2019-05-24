@@ -10,11 +10,12 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.4;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.05em;
 }
 p {
   margin: 0;
+  line-height: 1.75;
   &:not(:last-child) {
     margin-bottom: 25px;
   }
@@ -25,11 +26,19 @@ p {
   margin: 0 auto;
   position: relative;
 }
+.scroll-area {
+  height: 100%;
+  &__content {
+  }
+}
 .main {
   position: relative;
   z-index: 1;
   width: 100%;
   min-height: 100vh;
+  &_fixed {
+    height: 100vh;
+  }
 }
 .section {
   overflow: hidden;
@@ -43,9 +52,6 @@ p {
   position: relative;
   z-index: 2;
   padding: 0 20px;
-  &_style2 {
-    max-width: 1500px;
-  }
 }
 .animation-item {
   animation-duration: inherit;
@@ -211,6 +217,9 @@ p {
     font-size: 24px;
     letter-spacing: normal;
     margin-bottom: 20px;
+  }
+  p {
+    line-height: 1.4;
   }
   .interval {
     &:nth-child(odd) {

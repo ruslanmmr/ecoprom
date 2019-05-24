@@ -31,7 +31,7 @@ var innerWidth = $('body').innerWidth(),
 
 //
 function scrollInit() {
-  $('.scroll-area').niceScroll({
+  $('.scroll-area').niceScroll('.scroll-area__content', {
     cursorcolor: cursorcolorVar,
     cursorwidth: cursorwidthVar,
     cursorborder: cursorborderVar,
@@ -43,12 +43,12 @@ function scrollInit() {
 };
 //
 function compensateScrollbar() { 
-  var div = $('<div style="width:50px;height:50px;overflow:hidden;position:absolute;top:-200px;left:-200px;"><div style="height:100px;"></div>'); 
+  var div = $('<div style="height:100px; position: fixed; width: 100vw;"></div>'); 
   $('body').append(div); 
-  var w1 = $('div', div).innerWidth(); 
-  div.css('overflow-y', 'scroll'); 
-  var w2 = $('div', div).innerWidth(); 
-  $(div).remove(); 
+  var w1 = div.width(); 
+  div.css('width', '100%'); 
+  var w2 = div.width(); 
+  $(div).remove();
   scrollbarWidth = w1 - w2;
 }
 

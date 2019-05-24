@@ -3,7 +3,6 @@
   padding: 70px 0;
   p {
     font-size: 24px;
-    line-height: 1.75;
     margin: 0;
   }
   &__content {
@@ -151,7 +150,6 @@
 @media all and(max-width: 576px) {
   .service-map p {
     font-size: 18px;
-    line-height: 1.4;
   }
   .service-map {
     padding: 40px 0 20px 0;
