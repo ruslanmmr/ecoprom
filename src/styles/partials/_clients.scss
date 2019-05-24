@@ -19,7 +19,7 @@
     background: #FFFFFF;
     border: 1px solid #DDDDDD;
     filter: grayscale(100%);
-    transition: filter 0.3s;
+    transition: 0.3s;
     &:before {
       content: '';
       display: block;
@@ -27,6 +27,7 @@
     }
     &:hover {
       filter: grayscale(0);
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
     }
     img {
       padding: 35px;
