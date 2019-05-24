@@ -148,7 +148,6 @@
     padding: 20px 0;
   }
   &__item {
-    color: #333333;
     &_contact {
       font-size: 16px;
       width: 100%;
@@ -182,6 +181,7 @@
     position: relative;
     padding: 20px;
     transition: 0.3s;
+    color: #000;
     &:after {
       content: '';
       display: block;
