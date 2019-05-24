@@ -163,10 +163,11 @@ function tabs() {
       if($(this).hasClass('active')) {
         tabId = $(this).attr('data-tab');
         $('.tab-item').hide().eq(tabId - 1).fadeIn(300);
-        $('.tab-bg').eq(tabId - 1).fadeIn(500);
-        $('.tab-bg').not(`[data-tab='${tabId}']`).fadeOut(300);
-        $('.scroll-area').getNiceScroll().resize();
-        $(".fixed-area__section_content .scroll-area").getNiceScroll().doScrollPos(0,0);
+        $('.tab-bg').hide().eq(tabId - 1).fadeIn(500);
+        if(innerWidth > 768) {
+          $('.scroll-area').getNiceScroll().resize();
+          $(".fixed-area__section_content .scroll-area").getNiceScroll().doScrollPos(0,0);
+        }
         lazy();
       }
     })
