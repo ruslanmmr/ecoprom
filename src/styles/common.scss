@@ -88,10 +88,14 @@ p {
   font-size: 48px;
   display: block;
   margin: 0 0 30px 0;
-  letter-spacing: 0.1em;
   font-weight: 700;
   text-align: center;
   line-height: 1.2;
+}
+.title-description {
+  display: block;
+  text-align: center;
+  font-size: 34px;
 }
 .interval {
   &:nth-child(2) {
@@ -164,10 +168,16 @@ p {
   .title {
     font-size: 42px;
   }
+  .title-description {
+    font-size: 28px;
+  }
 }
 @media all and(max-width: 768px) {
   .title {
     font-size: 34px;
+  }
+  .title-description {
+    font-size: 24px;
   }
   .wrapper_fixed .main {
     height: auto;
@@ -218,6 +228,9 @@ p {
     letter-spacing: normal;
     margin-bottom: 20px;
   }
+  .title-description {
+    font-size: 18px;
+  }
   p {
     line-height: 1.4;
   }
@@ -238,6 +251,7 @@ p {
 
 @import "./partials/header";
 @import "./partials/home";
+@import "./partials/sale-section";
 @import "./partials/about";
 @import "./partials/clients";
 @import "./partials/fixed-area";
