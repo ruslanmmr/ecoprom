@@ -4,6 +4,7 @@ $(document).ready(function () {
   scrollInit();
   map();
   cover();
+  tabs();
   $(".input_phone").mask("(999) 999-99-99");
   new WOW().init();
 });
@@ -151,4 +152,37 @@ function cover() {
       im.addClass('wh').removeClass('ww');
     }
   });
+}
+
+function tabs() {
+  var $tabButton = $('.fixed-area-nav-item__container'),
+      tabId;
+
+  function tabState() {
+    $tabButton.each(function() {
+      if($(this).hasClass('active')) {
+        tabId = $(this).attr('data-tab');
+        $('.tab-item').hide().eq(tabId - 1).fadeIn(300);
+        $('.tab-bg').eq(tabId - 1).fadeIn(500);
+        $('.tab-bg').not(`[data-tab='${tabId}']`).fadeOut(300);
+        $('.scroll-area').getNiceScroll().resize();
+        $(".fixed-area__section_content .scroll-area").getNiceScroll().doScrollPos(0,0);
+        lazy();
+      }
+    })
+  }
+
+  tabState();
+  
+  $tabButton.on('click', function(e) {
+    e.preventDefault();
+    $tabButton.removeClass('active');
+    $(this).addClass('active');
+    tabState();
+    if(innerWidth <= 576) {
+      var $target = $('.fixed-area__content_right').offset().top - 60;
+        $('body,html').animate({scrollTop: $target}, 500);
+    }
+  })
+  
 }
