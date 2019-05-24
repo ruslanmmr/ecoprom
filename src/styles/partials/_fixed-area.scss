@@ -41,6 +41,9 @@
       height: 100%;
       background-color: rgba(0, 0, 0, 0.5);
     }
+    &:nth-child(4) {
+      background-position: center bottom;
+    }
   }
   &__scroll-area {
     position: relative;
