@@ -1,5 +1,4 @@
 .home {
-  padding-top: 84px;
   &__container {
     padding: 90px 0;
     position: relative;
@@ -160,9 +159,6 @@
   }
 }
 @media all and(max-width: 576px) {
-  .home {
-    padding-top: 76px;
-  }
   .home-link__description {
     font-size: 16px;
   }

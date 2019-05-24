@@ -54,7 +54,7 @@ function compensateScrollbar() {
 
 //nav
 function nav() {
-  var $navOpen = $('.nav-button'),
+  var $navOpen = $('.nav-open'),
     $navClose = $('.nav-close'),
     $nav = $('.nav'),
     $overlay = $('.overlay');
@@ -78,18 +78,16 @@ function nav() {
     if ($nav.hasClass('nav_active')) {
       compensateScrollbar();
       $(".compensate-scrollbar").css('padding-right', scrollbarWidth);
+      $(".nav").css('margin-right', 0);
       $('.scroll-area').getNiceScroll().resize();
       $('.header').addClass('active');
       scrollLock.hide($("body"));
       $overlay.fadeIn(300);
-      if(innerWidth <= 1530) {
-        $('.nav-button').addClass('active');
-      }
     } else {
       $(".compensate-scrollbar").css('padding-right', '0');
+      $(".nav").css('margin-right', -(scrollbarWidth));
       scrollLock.show($("body"));
       $('.header').removeClass('active');
-      $('.nav-button').removeClass('active');
       $overlay.fadeOut(300);
     }
   }
@@ -98,6 +96,7 @@ function nav() {
   } else {
     $('.header, .nav').removeClass('scrolled');
   }
+  
   $(window).on('scroll', function() {
     if (scrollTop>20) {
       $('.header, .nav').addClass('scrolled');
