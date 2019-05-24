@@ -1,11 +1,22 @@
 .fixed-area {
   height: 100%;
   width: 100%;
-  max-width: 1920px;
   margin: 0 auto;
   position: relative;
-  .container {
+  &__container {
+    display: flex;
+    justify-content: center;
     height: 100%;
+  }
+  &__section {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    &_head {
+      color: #fff;
+    }
+    &_content {
+    }
   }
   &__backgrounds {
     width: 50vw;
@@ -34,35 +45,19 @@
     position: relative;
     z-index: 2;
   }
-  &__container {
-    display: flex;
-    height: 100%;
-  }
   &__content {
     padding: 55px 0;
     overflow: hidden;
     height: 100%;
+    max-width: 650px;
     &_left {
       padding-right: 100px;
+      padding-left: 20px;
+      margin: 0 0 0 auto;
     }
     &_right {
       padding-left: 100px;
-    }
-  }
-  &__section {
-    width: 50%;
-    height: 100%;
-    position: relative;
-    &_head {
-      color: #fff;
-    }
-    &_content {
-      .nicescroll-rails {
-        position: fixed !important;
-        top: 64px !important;
-        left: auto !important;
-        right: 0 !important;
-      }
+      padding-right: 20px;
     }
   }
   &__title {
