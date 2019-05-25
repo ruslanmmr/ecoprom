@@ -1,5 +1,4 @@
 .sale-section {
-  padding: 90px 0 100px 0;
   text-align: center;
   &__products {
     padding: 60px 0;
@@ -153,9 +152,6 @@
 }
 
 @media all and(max-width: 1200px) {
-  .sale-section {
-    padding: 60px 0 100px 0;
-  }
   .product-block__head {
      margin-top: 0;
   }
@@ -186,9 +182,6 @@
 }
 
 @media all and(max-width: 576px) {
-  .sale-section {
-    padding: 35px 0 60px 0;
-  }
   .product-block__title {
     font-size: 18px;
   }

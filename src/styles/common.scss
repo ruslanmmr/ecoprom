@@ -4,7 +4,6 @@
 $main-color: #ff8a00;
 
 body {
-  text-rendering: optimizeSpeed;
   font: 18px "SFProDisplay", sans-serif;
   color: #000;
   min-width: 320px;
@@ -69,6 +68,9 @@ h5 {
   min-height: 100vh;
   &_fixed {
     height: 100vh;
+  }
+  &__wrap {
+    padding: 90px 0 100px 0;
   }
 }
 .input {
@@ -270,6 +272,9 @@ h5 {
   .t-size-24 {
     font-size: 22px;
   }
+  .main__wrap {
+    padding: 45px 0 60px 0;
+  }
 }
 @media all and(max-width: 576px) {
   h1, h2, h3 {
@@ -319,8 +324,10 @@ h5 {
 @import "./partials/header";
 @import "./partials/home";
 @import "./partials/sale-section";
+@import "./partials/services";
 @import "./partials/about";
 @import "./partials/clients";
+@import "./partials/documents";
 @import "./partials/fixed-area";
 @import "./partials/service-map";
 @import "./partials/footer";

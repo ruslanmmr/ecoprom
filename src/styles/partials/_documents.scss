@@ -1,0 +1,136 @@
+.documents {
+  text-align: center;
+  margin-bottom: -20px;
+  &__head {
+    margin-bottom: 90px;
+  }
+  &__row {
+    justify-content: center;
+  }
+}
+
+.documents-block {
+  padding-bottom: 20px;
+  &__container {
+    position: relative;
+    border: 1px solid #B7B7B7;
+    border-radius: 8px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    transition: 0.2s;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
+    &:hover {
+      border-color: transparent;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+      .documents-block__front {
+        opacity: 0;
+      }
+      .documents-block__back {
+        opacity: 1;
+      }
+    }
+  }
+  .icon {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    stroke: #5B5A5F;
+  }
+  &__sub-title {
+    position: absolute;
+    padding: 0 15px;
+    width: 100%;
+    top: 40px;
+    color: #B7B7B7;
+    text-align: center;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  &__title,
+  &__action {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 20px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    height: 2em;
+    line-height: 1.2;
+    text-align: center;
+  }
+  &__back,
+  &__front {
+    transition: 0.2s;
+  }
+  &__back {
+    opacity: 0;
+  }
+}
+
+@media all and(max-width: 1200px) {
+  .documents-block .icon {
+    width: 70px;
+    height: 70px;
+  }
+  .documents-block__action, .documents-block__title {
+    font-size: 16px;
+  }
+  .documents__head {
+    margin-bottom: 75px;
+  }
+}
+@media all and(max-width: 576px) {
+  .documents__head {
+    margin-bottom: 60px;
+  }
+  .documents-block .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .documents-block__action, .documents-block__title {
+    font-size: 14px;
+    bottom: 15px;
+  }
+  .documents-block__sub-title {
+    font-size: 14px;
+    top: 15px;
+  }
+  .documents {
+    .interval {
+      &:nth-child(2) {
+        animation-delay: .1s !important;
+      }
+      &:nth-child(3) {
+        animation-delay: .2s !important;
+      }
+      &:nth-child(4) {
+        animation-delay: .3s !important;
+      }
+    }
+  }
+}
+@media all and(max-width: 375px) {
+  .documents-block__action, .documents-block__title {
+    font-size: 12px;
+    bottom: 10px;
+  }
+  .documents-block__sub-title {
+    font-size: 12px;
+    top: 10px;
+  }
+}
