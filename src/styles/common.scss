@@ -4,12 +4,11 @@
 $main-color: #ff8a00;
 
 body {
-  font: 18px "SFProDisplay", sans-serif;
+  font: 18px "SFProText", sans-serif;
   color: #000;
   min-width: 320px;
   position: relative;
   line-height: 1.5;
-  font-weight: 400;
   letter-spacing: 0.05em;
 }
 p, li {
@@ -69,9 +68,6 @@ h5 {
   &_fixed {
     height: 100vh;
   }
-  &__wrap {
-    padding: 90px 0 100px 0;
-  }
 }
 .input {
   background: #EEEEEE;
@@ -110,6 +106,9 @@ h5 {
   position: relative;
   z-index: 2;
   padding: 0 20px;
+}
+.page-wrap {
+  padding: 90px 0 100px 0;
 }
 .animation-item {
   animation-duration: inherit;
@@ -193,6 +192,9 @@ h5 {
     
   }
 }
+.wow {
+  visibility: hidden;
+}
 .ww {
   height:100%!important;
 }
@@ -230,7 +232,7 @@ h5 {
   }
 }
 @media all and(max-width: 768px) {
-  .wrapper_fixed .main {
+  .main {
     height: auto;
   }
   .interval {
@@ -270,9 +272,9 @@ h5 {
   }
   //
   .t-size-24 {
-    font-size: 22px;
+    font-size: 20px;
   }
-  .main__wrap {
+  .page-wrap {
     padding: 45px 0 60px 0;
   }
 }
@@ -326,6 +328,7 @@ h5 {
 @import "./partials/sale-section";
 @import "./partials/services";
 @import "./partials/about";
+@import "./partials/contacts";
 @import "./partials/clients";
 @import "./partials/documents";
 @import "./partials/fixed-area";

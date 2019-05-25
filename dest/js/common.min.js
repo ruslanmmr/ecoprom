@@ -7,6 +7,7 @@ $(document).ready(function () {
   tabs();
   $(".input_phone").mask("+7 (999) 999-99-99");
   new WOW().init();
+  $(".header").fadeIn(300);
 });
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();

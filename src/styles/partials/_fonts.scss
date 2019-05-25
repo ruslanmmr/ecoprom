@@ -9,10 +9,9 @@
 	}
 }
 
-@include font-face("SFProDisplay", "../fonts/SFPro/SFProDisplay-Regular");
-@include font-face("SFProDisplay", "../fonts/SFPro/SFProDisplay-Light", 300);
-@include font-face("SFProDisplay", "../fonts/SFPro/SFProDisplay-Semibold", 500);
-@include font-face("SFProDisplay", "../fonts/SFPro/SFProDisplay-Bold", 700);
-@include font-face("Geometria", "../../fonts/Geometria/10261", 700);
+@include font-face("SFProDisplay", "../fonts/SFPro/SF-Pro-Display-Regular");
+@include font-face("SFProText", "../fonts/SFPro/SF-Pro-Text-Regular");
+@include font-face("SFProDisplay", "../fonts/SFPro/SF-Pro-Display-Bold", 700);
+@include font-face("SFProText", "../fonts/SFPro/SF-Pro-Text-Bold", 700);
 
 

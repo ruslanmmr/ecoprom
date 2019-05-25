@@ -23,6 +23,7 @@
     position: relative;
     z-index: 2;
     margin-bottom: 25px;
+    font-family: 'SFProDisplay';
   }
   &__sub-title {
     font-size: 32px;
@@ -51,6 +52,7 @@
 .home-link {
   letter-spacing: 0.05em;
   padding-bottom: 20px;
+  font-family: 'SFProDisplay';
   &__container {
     border-radius: 8px;
     background-color: #fff;

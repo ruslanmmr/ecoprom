@@ -3,12 +3,12 @@ html(lang="ru")
   head
     include blocks/head
   body
-    .wrapper.wrapper_fixed.compensate-scrollbar
+    .wrapper.compensate-scrollbar
       include blocks/header
       include blocks/nav
       span.overlay
       main.main.padding-compensate
-        .main__wrap
+        .page-wrap
           include blocks/documents-section
       include blocks/footer
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")

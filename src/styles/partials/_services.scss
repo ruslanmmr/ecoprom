@@ -1,3 +1,112 @@
 .services {
   text-align: center;
+  padding-bottom: 0;
+  &__container {
+    min-height: calc(100vh - 64px);
+    background: linear-gradient(202.4deg, #000000 -85.6%, #525252 104.23%);
+  }
+  &__head {
+    padding-bottom: 50px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: calc(100% + 200px);
+      top: 0;
+      left: 0;
+      background-color: #fff;
+    }
+  }
+  &__image {
+    height: 400px;
+    width: 100%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  &__content {
+    position: relative;
+    padding-top: 0;
+    margin-bottom: -20px;
+    .container {
+      padding-top: 0;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+  &__row {
+    margin-top: 60px;
+  }
+}
+
+.services-block {
+  padding-bottom: 20px;
+  font-family: 'SFProDisplay';
+  &__container {
+    color: #fff;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    padding: 35px;
+    text-align: center;
+    height: 100%;
+    transition: .3s;
+    &:hover {
+      background-color: #fff;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+      color: #000;
+      .icon {
+        stroke: #000;
+      }
+    }
+  }
+  .icon {
+    display: block;
+    height: 60px;
+    width: 90px;
+    margin: 0 auto;
+    transition: 0.2s;
+    stroke: #fff;
+  }
+  &__title {
+    text-transform: uppercase;
+    display: block;
+    margin: 45px 0 20px 0;
+  }
+}
+
+@media all and(max-width: 992px) {
+  .services__image {
+    height: 200px;
+  }
+  .services__head:before {
+    height: calc(100% + 100px);
+  }
+}
+@media all and(max-width: 768px) {
+  .services-block__container {
+    p {
+      font-size: 18px;
+    }
+  }
+  .services-block__title {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+  .services-block__container {
+    padding: 20px;
+  }
+}
+@media all and(max-width: 576px) {
+  .services__image {
+    height: 120px;
+  }
+  .services__row {
+    .interval {
+      animation-delay: 0s !important;
+    }
+  }
+  .services__head:before {
+    height: calc(100% + 60px);
+  }
 }
