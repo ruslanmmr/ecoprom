@@ -2,8 +2,8 @@ section.section.sale-section
   .container
     .sale-section__container
       .wow.fadeIn
-        h4.title Продажа нефтепродуктов
-        span.title-description Продаем печное топливо, мазут и масло<br>  подготовленное для сжигания
+        h2.title Продажа нефтепродуктов
+        p.t-size-28 Продаем печное топливо, мазут и масло<br>  подготовленное для сжигания
       .row.sale-section__products
         .product-block.col-xl-4.col-md-6.col-12.wow.fadeInUp.interval
           .product-block__container
@@ -42,4 +42,20 @@ section.section.sale-section
               .product-block__back
                 ul
                   li Не содержит воду<br> и механические примеси
-
+      .wow.fadeIn.sale-section__delivery
+        h3 Доставка
+        p.t-size-24 Доставка осуществляется в течении 1-3 дней транспортом нашей<br> компании. Есть автомобили вместимостью от 1 куб.м до 30 куб.м.<br> Предоставляем возможность забрать собственным транспортом.<br> Доставка в выходные по договоренности.<br> Отправляем образцы топлива в любой регион.
+      .contact-form-area.wow.fadeIn
+        p.contact-form-area__description.t-size-24 Стоимость зависит от количества и расстояния до места доставки.<br> Для расчета точной стоимости напишите нам
+        form(action="").contact-form
+          .contact-form__group.row
+            .contact-form__input.col-xl-6.col-12
+              input(type="text" placeholder="Ваше имя").input
+            .contact-form__input.col-xl-6.col-12
+              input(type="phone" placeholder="Номер телефона +7").input.input_phone
+          .contact-form__group
+            textarea(placeholder='Текст сообщения').input.input_textarea
+        .contact-form-area__phone
+          span.contact-form-area__phone-label Или позвоните нам по телефону:
+          h3 +7 (473) 230-36-37
+      .sale-section__warning.wow.fadeIn.t-size-24 Остерегайтесь мошенников!<br> Отработанное масло и печное топливо не может стоить 10р за литр.

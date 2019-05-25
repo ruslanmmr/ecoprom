@@ -1,8 +1,25 @@
 .sale-section {
   padding: 90px 0 100px 0;
+  text-align: center;
   &__products {
-    padding: 60px 0 40px 0;
+    padding: 60px 0;
+    margin-bottom: -20px;
     justify-content: center;
+  }
+  &__delivery {
+    margin: 0 auto;
+    max-width: 920px;
+    margin-bottom: 90px;
+  }
+  &__warning {
+    margin: 0 auto;
+    max-width: 1042px;
+    border: 1px solid #898787;
+    padding: 45px 30px;
+    border-radius: 6px;
+  }
+  .contact-form-area {
+    margin-bottom: 90px;
   }
 }
 
@@ -101,8 +118,37 @@
       justify-content: center;
       li {
         padding: 4px 0;
+        margin: 0;
       }
     }
+  }
+}
+
+.contact-form-area {
+  &__description {
+    margin-bottom: 45px;
+  }
+  &__phone {
+    margin: 45px 0 0 0;
+    text-align: center;
+    display: block;
+    &-label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    &-number {
+      font-weight: bold;
+      font-size: 36px;
+    }
+  }
+}
+.contact-form {
+  max-width: 920px;
+  margin: 0 auto;
+  &__group {
+  }
+  &__input {
+    padding-bottom: 25px;
   }
 }
 
@@ -146,9 +192,6 @@
   .product-block__title {
     font-size: 18px;
   }
-  .sale-section__products {
-    padding: 40px 0 20px 0;
-  }
   .product-block__price {
     font-size: 18px;
   }
@@ -160,5 +203,15 @@
   }
   .product-block {
     animation-delay: 0s!important;
+  }
+  .contact-form-area__description {
+    margin-bottom: 30px;
+  }
+  .contact-form-area__phone {
+    margin-top: 30px;
+  }
+  .sale-section .contact-form-area,
+  .sale-section__delivery {
+    margin-bottom: 60px;
   }
 }

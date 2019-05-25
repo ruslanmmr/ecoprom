@@ -5,7 +5,7 @@ $(document).ready(function () {
   map();
   cover();
   tabs();
-  $(".input_phone").mask("(999) 999-99-99");
+  $(".input_phone").mask("+7 (999) 999-99-99");
   new WOW().init();
 });
 $(window).resize(function () {
