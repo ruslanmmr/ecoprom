@@ -163,7 +163,7 @@ function tabs() {
     $tabButton.each(function() {
       if($(this).hasClass('active')) {
         tabId = $(this).attr('data-tab');
-        $('.tab-item').hide().eq(tabId - 1).fadeIn(300);
+        $('.tab-item').hide().eq(tabId - 1).fadeIn(500);
         $('.tab-bg').hide().eq(tabId - 1).fadeIn(500);
         if(innerWidth > 768) {
           $('.scroll-area').getNiceScroll().resize();

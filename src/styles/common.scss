@@ -39,10 +39,10 @@ h1, h2 {
   font-size: 48px;
 }
 h3 {
-  font-size: 36px;
+  font-size: 34px;
 }
 h4 {
-  font-size: 32px;
+  font-size: 30px;
 }
 h5 {
   font-size: 24px;
@@ -93,9 +93,6 @@ h5 {
     resize: none;
     min-height: 100px;
   }
-}
-.section {
-  overflow: hidden;
 }
 .padding-compensate {
   padding: 64px 0 100px 0;
@@ -218,11 +215,8 @@ h5 {
   h1, h2 {
     font-size: 34px;
   }
-  h3 {
-    font-size: 32px;
-  }
   h4 {
-    font-size: 24px;
+    font-size: 26px;
   }
   h5 {
     font-size: 22px;
