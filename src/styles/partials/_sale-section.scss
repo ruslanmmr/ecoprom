@@ -10,16 +10,6 @@
     max-width: 920px;
     margin-bottom: 90px;
   }
-  &__warning {
-    margin: 0 auto;
-    max-width: 1042px;
-    border: 1px solid #898787;
-    padding: 45px 30px;
-    border-radius: 6px;
-  }
-  .contact-form-area {
-    margin-bottom: 90px;
-  }
 }
 
 .product-block {
@@ -149,6 +139,14 @@
   }
   &__input {
     padding-bottom: 25px;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+    .button {
+      padding: 17px 37px;
+    }
   }
 }
 

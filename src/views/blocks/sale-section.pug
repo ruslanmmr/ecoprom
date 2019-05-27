@@ -15,9 +15,9 @@ section.section.sale-section
                 span.product-block__price 26, 50 ₽ <nobr>за литр</nobr>
               .product-block__back
                 ul
-                  li Плотность:
-                  li Сера:
-                  li Вспышка:
+                  li Плотность: 798 кг/м3
+                  li Сера: 0.37 %
+                  li Вспышка: 23 С*
         .product-block.col-xl-4.col-md-6.col-12.wow.fadeInUp.interval
           .product-block__container
             .product-block__head
@@ -28,9 +28,9 @@ section.section.sale-section
                 span.product-block__price 15 ₽ за кг
               .product-block__back
                 ul
-                  li Плотность:
-                  li Сера:
-                  li Вспышка:
+                  li Плотность: 876,4 кг/м3
+                  li Сера: 0.25 %
+                  li Вспышка: 179 С*
         .product-block.col-xl-4.col-md-6.col-12.wow.fadeInUp.interval
           .product-block__container
             .product-block__head
@@ -50,12 +50,14 @@ section.section.sale-section
         form(action="").contact-form
           .contact-form__group.row
             .contact-form__input.col-xl-6.col-12
-              input(type="text" placeholder="Ваше имя").input
+              input(type="text" placeholder="Ваше имя" required).input
             .contact-form__input.col-xl-6.col-12
-              input(type="phone" placeholder="Номер телефона +7").input.input_phone
+              input(type="phone" placeholder="Номер телефона +7" required).input.input_phone
           .contact-form__group
-            textarea(placeholder='Текст сообщения').input.input_textarea
+            textarea(placeholder='Текст сообщения' required).input.input_textarea
+          .contact-form__group
+            .contact-form__button 
+              button(type='submit').button ОТПРАВИТЬ
         .contact-form-area__phone
           span.contact-form-area__phone-label Или позвоните нам по телефону:
           h3 +7 (473) 230-36-37
-      .sale-section__warning.wow.fadeIn.t-size-24 Остерегайтесь мошенников!<br> Отработанное масло и печное топливо не может стоить 10р за литр.

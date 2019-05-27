@@ -22,7 +22,7 @@
           <div class="scroll-area">
             <div class="scroll-area__content sl--scrollable">
               <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="#">О компании</a></li>
+                <li class="nav__item"><a class="nav__link" href="index.html">О компании</a></li>
                 <li class="nav__item"><a class="nav__link" href="purchase.html">Покупка</a></li>
                 <li class="nav__item"><a class="nav__link" href="recycling.html">Утилизация</a></li>
                 <li class="nav__item"><a class="nav__link" href="sale.html">Продажа</a></li>
@@ -53,9 +53,9 @@
                         <div class="product-block__front"> <span class="product-block__price">26, 50 ₽ <nobr>за литр</nobr></span></div>
                         <div class="product-block__back">
                           <ul>
-                            <li>Плотность:</li>
-                            <li>Сера:</li>
-                            <li>Вспышка:</li>
+                            <li>Плотность: 798 кг/м3</li>
+                            <li>Сера: 0.37 %</li>
+                            <li>Вспышка: 23 С*</li>
                           </ul>
                         </div>
                       </div>
@@ -68,9 +68,9 @@
                         <div class="product-block__front"> <span class="product-block__price">15 ₽ за кг</span></div>
                         <div class="product-block__back">
                           <ul>
-                            <li>Плотность:</li>
-                            <li>Сера:</li>
-                            <li>Вспышка:</li>
+                            <li>Плотность: 876,4 кг/м3</li>
+                            <li>Сера: 0.25 %</li>
+                            <li>Вспышка: 179 С*</li>
                           </ul>
                         </div>
                       </div>
@@ -99,21 +99,25 @@
                   <form class="contact-form" action="">
                     <div class="contact-form__group row">
                       <div class="contact-form__input col-xl-6 col-12">
-                        <input class="input" type="text" placeholder="Ваше имя">
+                        <input class="input" type="text" placeholder="Ваше имя" required>
                       </div>
                       <div class="contact-form__input col-xl-6 col-12">
-                        <input class="input input_phone" type="phone" placeholder="Номер телефона +7">
+                        <input class="input input_phone" type="phone" placeholder="Номер телефона +7" required>
                       </div>
                     </div>
                     <div class="contact-form__group">
-                      <textarea class="input input_textarea" placeholder="Текст сообщения"></textarea>
+                      <textarea class="input input_textarea" placeholder="Текст сообщения" required></textarea>
+                    </div>
+                    <div class="contact-form__group">
+                      <div class="contact-form__button"> 
+                        <button class="button" type="submit">ОТПРАВИТЬ</button>
+                      </div>
                     </div>
                   </form>
                   <div class="contact-form-area__phone"><span class="contact-form-area__phone-label">Или позвоните нам по телефону:</span>
                     <h3>+7 (473) 230-36-37</h3>
                   </div>
                 </div>
-                <div class="sale-section__warning wow fadeIn t-size-24">Остерегайтесь мошенников!<br> Отработанное масло и печное топливо не может стоить 10р за литр.</div>
               </div>
             </div>
           </section>
