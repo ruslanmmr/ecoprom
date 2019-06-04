@@ -18,7 +18,7 @@
   }
   &__title {
     margin: 0;
-    font-size: 86px;
+    font-size: 72px;
     line-height: 1.15;
     position: relative;
     z-index: 2;
@@ -139,9 +139,14 @@
     margin-bottom: 60px;
   }
 }
+@media all and(max-width: 1200px) {
+  .home__title {
+    font-size: 56px;
+  }
+}
 @media all and(max-width: 768px) {
   .home__title {
-    font-size: 52px;
+    font-size: 42px;
   }
   .home__content {
     margin-bottom: 40px;
@@ -181,10 +186,10 @@
     height: 60px;
   }
   .home__title {
-    font-size: 46px;
+    font-size: 32px;
   }
   .home__sub-title {
-    font-size: 22px;
+    font-size: 20px;
   }
   .home {
     margin-bottom: 40px;
@@ -230,8 +235,8 @@
     position: relative;
   }
   .home__title {
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: 30px;
+    margin-bottom: 15px;
   }
   .home__sub-title {
     font-size: 18px;
@@ -241,5 +246,8 @@
 @media all and(max-width: 370px) {
   .home-link__description {
     font-size: 10px;
+  }
+  .home__title {
+    font-size: 28px;
   }
 }

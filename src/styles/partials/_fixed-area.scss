@@ -222,6 +222,9 @@
   .fixed-area__content {
     padding: 45px 20px;
   }
+  .fixed-area__scroll-area {
+    touch-action: auto !important;
+  }
   .fixed-area__content_right {
     padding-bottom: 60px;
   }
